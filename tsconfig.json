@@ -1,38 +1,36 @@
 {
-    "compilerOptions": {
-        "noEmitOnError": true,
-        "target": "es6",
-        "allowJs": true,
-        "skipLibCheck": true,
-        "esModuleInterop": true,
-        "allowSyntheticDefaultImports": true,
-        "removeComments": true,
-        "sourceMap": true,
-        "forceConsistentCasingInFileNames": true,
-        "module": "ES6",
-        "rootDir": "./src",
-        // "baseUrl": "./",
-        // "paths": {
-        //     "@assets":["./public/assets"]
-        // },
-        "moduleResolution": "node",
-        "resolveJsonModule": true,
-        "isolatedModules": true,
-        "noEmit": true,
-        "experimentalDecorators": true,
-        "jsx": "react-jsx",
-        /*Type Checking*/
-        "strict": true,
-        "strictPropertyInitialization": false,
-        // "noImplicitAny": false,
-        // "strictNullChecks": false,
-        // "strictFunctionTypes": false,
-        "noUnusedLocals": true,
-        "noFallthroughCasesInSwitch": true,
-        "allowUnreachableCode": true,
-        "noUncheckedIndexedAccess": true,
-        "noImplicitOverride": true
-      },
-    "include": ["src/**/*.ts", "src/**/*.tsx", "@types"],
-    "exclude": ["node_modules"]
+	"compilerOptions": {
+		"noEmitOnError": true,
+		"target": "ESNext",
+		"allowJs": true,
+		"skipLibCheck": true,
+		"esModuleInterop": true,
+		"allowSyntheticDefaultImports": true,
+		"removeComments": true,
+		"sourceMap": true,
+		"forceConsistentCasingInFileNames": true,
+		"module": "ESNext",
+		"rootDir": "./src",
+		// "outDir": "./build/",
+		// "baseUrl": "./",
+		// "paths": {
+		//     "@assets":["./public/assets"]
+		// },
+		"moduleResolution": "node",
+		"resolveJsonModule": true,
+		"isolatedModules": true,
+		"noEmit": false,
+		"experimentalDecorators": true,
+		"jsx": "react-jsx",
+		/*Type Checking*/
+		"strict": true,
+		"strictPropertyInitialization": false,
+		"noUnusedLocals": false,
+		"noFallthroughCasesInSwitch": true,
+		"allowUnreachableCode": true,
+		"noUncheckedIndexedAccess": true,
+		"noImplicitOverride": true
+	},
+	"include": ["**/*.ts", "**/*.tsx", "@types"],
+	"exclude": ["node_modules"]
 }

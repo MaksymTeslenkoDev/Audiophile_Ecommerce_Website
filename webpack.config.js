@@ -4,6 +4,7 @@ const TerserPlugin = require("terser-webpack-plugin");
 const OptimizeCSSAssetsPlugin = require("optimize-css-assets-webpack-plugin");
 const path = require("path");
 const webpack = require("webpack");
+const ESLintPlugin = require("eslint-webpack-plugin");
 
 module.exports = (env = {}) => {
   const { mode = "development" } = env;
@@ -44,6 +45,7 @@ module.exports = (env = {}) => {
             : undefined
         )
       ),
+      new ESLintPlugin({ extensions: ["ts", "tsx"] }),
       new webpack.DefinePlugin({
         IS_DEV_MODE: isDev,
         IS_PRODUCTION_MODE: isProd,
@@ -109,6 +111,7 @@ module.exports = (env = {}) => {
   return {
     mode: isProd ? "production" : isDev && "development",
     devtool: "inline-source-map",
+    entry: "./src/index.tsx",
     output: {
       filename: isProd ? "main-[hash:8].js" : undefined,
       path: path.resolve(__dirname, "dist"),
