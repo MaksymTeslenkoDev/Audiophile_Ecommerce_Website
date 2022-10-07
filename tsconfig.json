@@ -12,10 +12,10 @@
 		"module": "ESNext",
 		"rootDir": "./src",
 		// "outDir": "./build/",
-		// "baseUrl": "./",
-		// "paths": {
-		//     "@assets":["./public/assets"]
-		// },
+		"baseUrl": "src",
+		"paths": {
+			"@styles/*": ["scss/*"]
+		},
 		"moduleResolution": "node",
 		"resolveJsonModule": true,
 		"isolatedModules": true,
