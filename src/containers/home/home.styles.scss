@@ -1,0 +1,49 @@
+@import "../../scss/mixins/font-face";
+.home {
+	background-image: url("~/public/assets/home/mobile/image-header.jpg");
+	background-position: center;
+	background-size: cover;
+	@media screen and (min-width: 768px) {
+		background-image: url("~/public/assets/home/tablet/image-header.jpg");
+	}
+	@media screen and (min-width: 992px) {
+		background-image: url("~/public/assets/home/desktop/image-hero.jpg");
+	}
+}
+.main__text {
+	text-transform: uppercase;
+	text-align: center;
+	color: var(--light-common);
+	padding: 7.75rem 0 9.875rem;
+	@media screen and (min-width: 576px) {
+		padding: 6.75rem 0 6.75rem;
+	}
+	& .subtitle {
+		font-size: 0.75rem;
+		letter-spacing: 0.675rem;
+		margin-bottom: 1rem;
+		@media screen and (min-width: 576px) {
+			margin-bottom: 2rem;
+		}
+	}
+	& .title {
+		font-size: 2.25rem;
+		letter-spacing: 0.075rem;
+		line-height: 3rem;
+		@include font-face("Manrope", "Manrope-Bold", 700, normal);
+		margin-bottom: 2rem;
+		@media screen and (min-width: 576px) {
+			font-size: 2.875rem;
+			letter-spacing: 0.125rem;
+		}
+	}
+	& .description {
+		@include font-face("Manrope", "Manrope-Medium", 500, normal);
+		font-size: 0.875rem;
+		margin-bottom: 3rem;
+	}
+
+	@media screen and (min-width: 992px) {
+		text-align: left;
+	}
+}

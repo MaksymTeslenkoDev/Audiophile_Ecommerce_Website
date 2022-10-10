@@ -28,6 +28,7 @@
 		"react/jsx-props-no-spreading": ["warn"],
 		"@typescript-eslint/dot-notation": "off",
 		"@typescript-eslint/no-throw-literal": "off",
+		"import/prefer-default-export": "off",
 		"quotes": [
 			"error",
 			"double",

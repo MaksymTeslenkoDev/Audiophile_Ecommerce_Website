@@ -146,7 +146,10 @@ module.exports = (env = {}) => {
 				//Loading Images
 				{
 					test: /\.(png|jpg|jpeg|gif|ico)$/,
-					type: "asset/inline",
+					type: "asset/resource",
+					generator: {
+						filename: `assets/[name][hash:8][ext][query]`,
+					},
 					// esModule: false,
 				},
 				//Loading Fonts
@@ -162,6 +165,7 @@ module.exports = (env = {}) => {
 		resolve: {
 			alias: {
 				styles: path.resolve(__dirname, "src/scss"),
+				shared: path.resolve(__dirname, "src/shared"),
 				// assets: path.resolve(__dirname, "src/assets"),
 			},
 			modules: ["node_modules"],
