@@ -1,0 +1,65 @@
+@import "../../scss/mixins/font-face";
+
+.navigationBar {
+	position: relative;
+	background-color: rgba(0, 0, 0, 0);
+	padding: 2rem 1.5rem;
+	border-bottom: 0.0125rem solid #979797;
+	@media screen and (min-width: 768px) {
+		padding: 2rem 0rem;
+	}
+
+	& .nav-link {
+		color: var(--light-common);
+		&.active {
+			color: var(--color-common);
+		}
+		&:hover {
+			color: var(--color-common);
+		}
+		@media screen and (min-width: 992px) {
+			padding-left: 1.125rem !important;
+			padding-right: 1.125rem !important;
+		}
+	}
+	&__links-wrapper {
+		cursor: pointer;
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		line-height: 1.5rem;
+		@include font-face("Manrope", "Manrope-Bold", 700, normal);
+	}
+
+	&__toggler-icon {
+		padding: 0;
+		& .navbar-toggler-icon {
+			background-image: url("~/public/assets/shared/tablet/icon-hamburger.svg");
+			width: 1rem;
+			height: 1rem;
+		}
+	}
+
+	&__cart-icon {
+		cursor: pointer;
+		&_mobile {
+			display: block;
+			@media screen and (min-width: 992px) {
+				display: none;
+			}
+		}
+		&_desktop {
+			display: none;
+			margin-left: auto;
+			@media screen and (min-width: 992px) {
+				display: block;
+			}
+		}
+	}
+
+	&__brandIcon {
+		@media screen and (min-width: 576px) and (max-width: 992px) {
+			flex: 1;
+			margin-left: 3rem;
+		}
+	}
+}

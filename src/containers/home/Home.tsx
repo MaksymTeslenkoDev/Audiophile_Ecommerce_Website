@@ -1,11 +1,12 @@
 import { Col, Container, Row } from "react-bootstrap";
+import { NavBar } from "shared/NavBar/index";
 import "./home.styles.scss";
 
 export function Home(): JSX.Element {
 	return (
-		<Container fluid className="home">
-			<Container fluid="md" className="home__main">
-				<div>Header</div>
+		<main className="home">
+			<Container fluid="md">
+				<NavBar />
 				<Row className="justify-content-center justify-content-lg-start">
 					<Col lg="5" md="6" xs="9" sm="7" className="main__text">
 						<p className="subtitle">new product</p>
@@ -20,6 +21,6 @@ export function Home(): JSX.Element {
 					</Col>
 				</Row>
 			</Container>
-		</Container>
+		</main>
 	);
 }
