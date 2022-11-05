@@ -7,21 +7,23 @@
 	justify-content: center;
 	text-transform: uppercase;
 	@include font-face("Manrope", "Manrope-Bold", 700, normal);
+	letter-spacing: 0.0125rem;
 	outline: 0;
 	border: none;
 	cursor: pointer;
 	overflow: hidden;
+	font-weight: 600;
 	&::after {
 		content: "";
 		background: #979797;
 		display: block;
 		position: absolute;
-		padding-top: 300%;
-		padding-left: 350%;
+		padding-top: 200%;
+		padding-left: 200%;
 		margin-left: -20px !important;
 		margin-top: -120%;
 		opacity: 0;
-		transition: all 0.8s;
+		transition: all 0.5s;
 	}
 	&:active {
 		&::after {
@@ -31,6 +33,9 @@
 			transition: 0s;
 		}
 	}
+	&__text {
+		margin-right: 0.5rem;
+	}
 	&.btn-component_contained.btn-component_primary {
 		background-color: var(--color-common);
 		color: var(--light-common);
@@ -39,7 +44,14 @@
 			background-color: var(--color-primary);
 		}
 	}
-
+	&.btn-component_contained.btn-component_dark {
+		background-color: var(--dark-common);
+		color: var(--light-common);
+		&:hover,
+		:active {
+			background-color: #4c4c4c;
+		}
+	}
 	&.btn-component_outlined.btn-component_primary {
 		background: none;
 		color: var(--color-primary);
@@ -61,6 +73,18 @@
 			background: var(--dark-common);
 			color: var(--light-common);
 			border: 0.0125rem solid var(--dark-common);
+		}
+	}
+
+	&.btn-component_transparent.btn-component_primary {
+		background: none;
+		color: var(--dark-common);
+		& .btn-component__text {
+			opacity: 0.4;
+		}
+		&:hover,
+		:active {
+			color: var(--color-primary);
 		}
 	}
 

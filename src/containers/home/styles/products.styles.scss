@@ -1,0 +1,219 @@
+@import "../../../scss/mixins/font-face";
+
+.products {
+	padding: 8.5rem 0 7.5rem 0;
+	&__cards {
+		margin-bottom: 6rem;
+		& > div {
+			margin-bottom: 6rem;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 0;
+			}
+		}
+		& > div:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+.promo-row {
+	border-radius: 0.5rem;
+}
+.product-card-item {
+	position: relative;
+	text-align: center;
+	padding: 4rem 0 2rem 0;
+	background-color: #f1f1f1;
+	border-radius: 0.5rem;
+	padding: 7rem 0 2rem 0;
+	@media screen and (min-width: 768px) {
+		margin-bottom: 0;
+	}
+	&__img {
+		top: -4.5rem;
+		left: 50%;
+		margin-left: -4.8125rem;
+		width: 9.625rem;
+		height: 12rem;
+		position: absolute;
+		& img {
+			object-fit: cover;
+			width: 100%;
+			height: 100%;
+		}
+	}
+	&__title {
+		@include font-face("Manrope", "Manrope-Bold", 700, normal);
+		font-weight: 700;
+		font-size: 1.125rem;
+		text-transform: uppercase;
+		letter-spacing: 1.25px;
+		margin-bottom: 1rem;
+	}
+}
+.main-promo {
+	padding: 3.25rem 0 4rem 0;
+	margin-bottom: 1.5rem;
+	background-color: var(--color-common);
+	background-image: url("~/public/assets/home/desktop/pattern-circles.svg");
+	background-position-x: center;
+	background-position-y: 145%;
+
+	background-repeat: no-repeat;
+	overflow: hidden;
+	@media screen and (min-width: 992px) {
+		overflow: hidden;
+		padding: 8.25rem 0 0 0;
+		background-position-x: -1200%;
+		background-position-y: 0;
+	}
+	&__image-wrapper {
+		display: flex;
+		justify-content: center;
+		position: relative;
+		height: 100%;
+	}
+	&__image {
+		width: 12.375rem;
+		height: 14.75rem;
+		background-image: url("~/public/assets/home/desktop/image-speaker-zx9.png");
+		background-position: top;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		@media screen and (min-width: 992px) {
+			position: absolute;
+			width: 25.625rem;
+			height: 30.875rem;
+			bottom: -1.375rem;
+		}
+	}
+	&__content-wrapper {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin-top: 4.625rem;
+		color: var(--light-common);
+		& .title {
+			@include font-face("Manrope", "Manrope-Bold", 700, normal);
+			font-size: 3.5rem;
+			letter-spacing: 0.125rem;
+			text-align: center;
+			margin: 0;
+		}
+		& .description {
+			@include font-face("Manrope", "Manrope-Medium", 500, normal);
+			min-width: 21.875rem;
+			max-width: 21.875rem;
+			text-align: center;
+			margin-top: 2rem;
+		}
+		& .cta-button {
+			margin-top: 3rem;
+			font-size: 0.875rem;
+		}
+		@media screen and (min-width: 992px) {
+			margin-top: 0;
+			margin-bottom: 7.75rem;
+			display: flex;
+			flex-direction: column;
+			// justify-content: flex-start;
+			align-items: flex-start;
+			& .title {
+				text-align: left;
+			}
+			& .description {
+				text-align: left;
+				min-width: auto;
+				max-width: auto;
+			}
+		}
+	}
+}
+.second-promo {
+	padding: 6.375rem 0 6rem 1.5rem;
+	margin-bottom: 1.5rem;
+	background-image: url("~/public/assets/home/mobile/image-speaker-zx7.jpg");
+	background-position: top;
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	.title {
+		font-size: 1.75rem;
+		@include font-face("Manrope", "Manrope-Bold", 700, normal);
+		font-weight: bold;
+		letter-spacing: 0.25rem;
+		margin-bottom: 2rem;
+	}
+	@media screen and (min-width: 768px) {
+		padding-left: 4rem;
+		background-position: right;
+		background-size: cover;
+		background-image: url("~/public/assets/home/tablet/image-speaker-zx7.jpg");
+	}
+	@media screen and (min-width: 992px) {
+		margin-top: 0;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		background-image: url("~/public/assets/home/desktop/image-speaker-zx7.jpg");
+		& .title {
+			text-align: left;
+		}
+		& .description {
+			text-align: left;
+			min-width: auto;
+			max-width: auto;
+		}
+	}
+}
+.third-promo {
+	&_half {
+		border-radius: 0.5rem;
+		overflow: hidden;
+		&:first-child {
+			margin-bottom: 1.5rem;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 0;
+			}
+		}
+		& .img-wrapper {
+			margin-left: -15px;
+			margin-right: -15px;
+			min-height: 12.5rem;
+			height: 100%;
+			background-image: url("~/public/assets/home/mobile/image-earphones-yx1.jpg");
+			background-position: top;
+			background-size: 100% 100%;
+			background-repeat: no-repeat;
+			border-radius: 0.5rem;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 0;
+				margin-right: -7.5px;
+				background-image: url("~/public/assets/home/tablet/image-earphones-yx1.jpg");
+			}
+			@media screen and (min-width: 992px) {
+				background-image: url("~/public/assets/home/desktop/image-earphones-yx1.jpg");
+			}
+		}
+		.title {
+			font-size: 1.75rem;
+			@include font-face("Manrope", "Manrope-Bold", 700, normal);
+			font-weight: bold;
+			letter-spacing: 0.25rem;
+			margin-bottom: 2rem;
+		}
+		& .content-wrapper {
+			padding: 3rem 0 3rem 2rem;
+			margin-right: -15px;
+			margin-left: -15px;
+			background-color: #f1f1f1;
+			border-radius: 0.5rem;
+			@media screen and (min-width: 768px) {
+				padding-top: 6.375rem;
+				padding-bottom: 6rem;
+				padding-left: 2.5rem;
+				margin-left: -7.5px;
+			}
+			@media screen and (min-width: 992px) {
+			}
+		}
+	}
+}

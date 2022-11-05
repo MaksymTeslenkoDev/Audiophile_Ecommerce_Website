@@ -20,7 +20,7 @@ export function Button({
 	children,
 	variant = "contained",
 	color = "primary",
-	className,
+	className = "",
 	id,
 	onClick,
 	size = "md",
@@ -31,14 +31,14 @@ export function Button({
 	return (
 		/* eslint-disable react/button-has-type */
 		<button
-			className={`btn-component  ${className} btn-component_${variant} btn-component_${size} btn-component_${color} ${
+			className={`btn-component ${className} btn-component_${variant} btn-component_${size} btn-component_${color} ${
 				disabled ? "btn-component_disabled" : ""
 			}  `}
 			id={id}
 			type={type}
 			onClick={onClick}
 		>
-			{children}
+			<span className={`${icon ? "btn-component__text" : ""}`}>{children}</span>
 			{icon || undefined}
 		</button>
 		/* eslint-enable react/button-has-type */
@@ -48,7 +48,7 @@ export function Button({
 Button.defaultProps = {
 	variant: "contained",
 	color: "primary",
-	className: undefined,
+	className: "",
 	id: undefined,
 	onClick: undefined,
 	size: "md",

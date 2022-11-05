@@ -1,17 +1,4 @@
-@import "../../scss/mixins/font-face";
-.home {
-	// background: url("~/public/assets/home/mobile/image-header.jpg") no-repeat center center fixed;
-	background-image: url("~/public/assets/home/mobile/image-header.jpg");
-	background-position: top;
-	background-size: 100% 100%;
-	background-repeat: no-repeat;
-	@media screen and (min-width: 768px) {
-		background-image: url("~/public/assets/home/tablet/image-header.jpg");
-	}
-	@media screen and (min-width: 992px) {
-		background-image: url("~/public/assets/home/desktop/image-hero.jpg");
-	}
-}
+@import "../../../scss/mixins/font-face";
 .main__text {
 	text-transform: uppercase;
 	text-align: center;
