@@ -1,0 +1,52 @@
+@import "../../scss/mixins/font-face";
+.pre-footer {
+	padding-bottom: 6rem;
+	@media screen and (min-width: 992px) {
+		padding-bottom: 12.5rem;
+	}
+	&__image-wrapper {
+		min-height: 18.75rem;
+		background-image: url("~/public/assets/shared/mobile/image-best-gear.jpg");
+		background-position: top;
+		background-size: 100% 100%;
+		background-repeat: no-repeat;
+		margin-bottom: 4rem;
+		border-radius: 0.5rem;
+		@media screen and (min-width: 768px) {
+			background-image: url("~/public/assets/shared/tablet/image-best-gear.jpg");
+		}
+		@media screen and (min-width: 992px) {
+			height: 100%;
+			margin-bottom: 0;
+			background-image: url("~/public/assets/shared/desktop/image-best-gear.jpg");
+		}
+	}
+	&__content-wrapper {
+		padding: 0 2rem;
+		color: var(--dark-common);
+		text-align: center;
+
+		@media screen and (min-width: 992px) {
+			padding: 9.125rem 6rem 9.125rem 0;
+			text-align: left;
+		}
+		&__title {
+			@include font-face("Manrope", "Manrope-Bold", 700, normal);
+			font-weight: 700;
+			font-size: 2.5rem;
+			text-transform: uppercase;
+			letter-spacing: 1.44px;
+			line-height: 2.75rem;
+			margin-bottom: 2rem;
+			& span {
+				color: var(--color-common);
+			}
+		}
+		&__description {
+			@include font-face("Manrope", "Manrope-Medium", 500, normal);
+			font-weight: 500;
+			line-height: 1.625rem;
+			opacity: 0.5;
+		}
+	}
+}
