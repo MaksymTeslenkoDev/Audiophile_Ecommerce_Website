@@ -16,7 +16,7 @@ export function ProductCartItem({ image, title }: Props): JSX.Element {
 				<Button
 					size="sm"
 					variant="transparent"
-					icon={<img src={IconArrowRight} alt="arrow-right" />}
+					icon={<IconArrowRight width="1rem" height=".75rem" />}
 				>
 					shop
 				</Button>

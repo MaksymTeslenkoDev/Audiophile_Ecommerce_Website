@@ -1,0 +1,110 @@
+@import "../../scss/mixins/font-face";
+.footer {
+	background-color: var(--dark-common);
+	padding: 0 0 2rem 0;
+	position: relative;
+	color: var(--light-common);
+	&__navigation {
+		padding-top: 3rem;
+		position: relative;
+		margin-bottom: 3rem;
+		text-align: center;
+		@media screen and (min-width: 768px) {
+			text-align: left;
+		}
+		&::before {
+			content: "";
+			position: absolute;
+			width: 6.25rem;
+			height: 0.25rem;
+			background-color: var(--color-common);
+			left: 50%;
+			margin-left: -3.125rem;
+			top: 0;
+			@media screen and (min-width: 768px) {
+				left: 14px;
+				margin-left: 0;
+			}
+		}
+	}
+	&__logo-wrapper {
+		margin-bottom: 3rem;
+	}
+	&__links-wrapper {
+		display: flex;
+		flex-direction: column;
+		cursor: pointer;
+		font-size: 0.875rem;
+		text-transform: uppercase;
+		line-height: 1.5rem;
+		@include font-face("Manrope", "Manrope-Bold", 700, normal);
+		& .nav-link {
+			color: var(--light-common);
+			&.active {
+				color: var(--color-common);
+			}
+			&:hover {
+				color: var(--color-common);
+			}
+			@media screen and (min-width: 768px) {
+				padding-left: 0rem !important;
+				padding-right: 2rem !important;
+			}
+		}
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+		}
+		@media screen and (min-width: 992px) {
+			justify-content: flex-end;
+		}
+	}
+
+	&__description {
+		text-align: center;
+		opacity: 0.5;
+		@include font-face("Manrope", "Manrope-Medium", 500, normal);
+		margin-bottom: 3rem;
+		@media screen and (min-width: 768px) {
+			text-align: left;
+		}
+		@media screen and (min-width: 992px) {
+			width: 80% !important;
+		}
+	}
+	&__copyrights-socials-wrapper {
+		display: flex;
+		flex-direction: column;
+
+		align-items: center;
+		& span {
+			margin-bottom: 3rem;
+			opacity: 0.5;
+			@media screen and (min-width: 768px) {
+				margin-bottom: 0;
+			}
+		}
+
+		& .nav-link {
+			padding: 0.5rem;
+			& svg path {
+				fill: var(--light-common);
+			}
+			&.active {
+				& svg path {
+					fill: var(--color-common);
+				}
+			}
+			&:hover {
+				color: var(--color-common);
+				& svg path {
+					fill: var(--color-common);
+				}
+			}
+		}
+		@media screen and (min-width: 768px) {
+			flex-direction: row;
+			justify-content: space-between;
+			align-items: center;
+		}
+	}
+}

@@ -154,7 +154,8 @@ module.exports = (env = {}) => {
 				},
 				{
 					test: /\.(svg)$/,
-					type: "asset/inline",
+					// type: "asset/inline",
+					use: [{ loader: "@svgr/webpack", options: { icon: true } }],
 					// generator: {
 					// 	filename: `assets/[name][hash:8][ext][query]`,
 					// },

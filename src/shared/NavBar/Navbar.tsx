@@ -15,7 +15,7 @@ export function NavBar(): JSX.Element {
 					as="button"
 				/>
 				<Navbar.Brand href="#home" className="navigationBar__brandIcon">
-					<img src={Logo} alt="logo-icon" />
+					<Logo width="9rem" height="1.625rem" />
 				</Navbar.Brand>
 				<div className="navigationBar__cart-icon navigationBar__cart-icon_mobile">
 					<img src={Icon} alt="cart-icon" />
@@ -32,7 +32,7 @@ export function NavBar(): JSX.Element {
 					</Nav>
 				</Navbar.Collapse>
 				<div className="navigationBar__cart-icon navigationBar__cart-icon_desktop ml-auto">
-					<img src={Icon} alt="cart-icon" />
+					<Icon width="1.5rem" height="1.25rem" />
 				</div>
 			</Navbar>
 		</Row>
