@@ -1,54 +1,9 @@
-@import "../../../scss/mixins/font-face";
-
 .products {
-	padding: 8.5rem 0 5.875rem 0;
-	&__cards {
-		margin-bottom: 6rem;
-		& > div {
-			margin-bottom: 6rem;
-			@media screen and (min-width: 768px) {
-				margin-bottom: 0;
-			}
-		}
-		& > div:last-child {
-			margin-bottom: 0;
-		}
-	}
+	padding: 0 0 5.875rem 0;
 }
+
 .promo-row {
 	border-radius: 0.5rem;
-}
-.product-card-item {
-	position: relative;
-	text-align: center;
-	padding: 4rem 0 2rem 0;
-	background-color: #f1f1f1;
-	border-radius: 0.5rem;
-	padding: 7rem 0 2rem 0;
-	@media screen and (min-width: 768px) {
-		margin-bottom: 0;
-	}
-	&__img {
-		top: -4.5rem;
-		left: 50%;
-		margin-left: -4.8125rem;
-		width: 9.625rem;
-		height: 12rem;
-		position: absolute;
-		& img {
-			object-fit: cover;
-			width: 100%;
-			height: 100%;
-		}
-	}
-	&__title {
-		@include font-face("Manrope", "Manrope-Bold", 700, normal);
-		font-weight: 700;
-		font-size: 1.125rem;
-		text-transform: uppercase;
-		letter-spacing: 1.25px;
-		margin-bottom: 1rem;
-	}
 }
 .main-promo {
 	padding: 3.25rem 0 4rem 0;
@@ -93,18 +48,18 @@
 		margin-top: 4.625rem;
 		color: var(--light-common);
 		& .title {
-			@include font-face("Manrope", "Manrope-Bold", 700, normal);
 			font-size: 3.5rem;
+			font-weight: 700;
 			letter-spacing: 0.125rem;
 			text-align: center;
 			margin: 0;
 		}
 		& .description {
-			@include font-face("Manrope", "Manrope-Medium", 500, normal);
 			min-width: 21.875rem;
 			max-width: 21.875rem;
 			text-align: center;
 			margin-top: 2rem;
+			font-weight: 500;
 		}
 		& .cta-button {
 			margin-top: 3rem;
@@ -137,8 +92,7 @@
 	background-repeat: no-repeat;
 	.title {
 		font-size: 1.75rem;
-		@include font-face("Manrope", "Manrope-Bold", 700, normal);
-		font-weight: bold;
+		font-weight: 700;
 		letter-spacing: 0.25rem;
 		margin-bottom: 2rem;
 	}
@@ -195,8 +149,7 @@
 		}
 		.title {
 			font-size: 1.75rem;
-			@include font-face("Manrope", "Manrope-Bold", 700, normal);
-			font-weight: bold;
+			font-weight: 700;
 			letter-spacing: 0.25rem;
 			margin-bottom: 2rem;
 		}

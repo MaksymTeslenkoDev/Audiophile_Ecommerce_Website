@@ -166,7 +166,7 @@ module.exports = (env = {}) => {
 					test: /\.(ttf|otf|eot|woff|woff2)$/,
 					type: "asset/resource",
 					generator: {
-						filename: `fonts/[name][ext][query]`,
+						filename: `fonts/[name][ext]`,
 					},
 				},
 			],
@@ -176,6 +176,8 @@ module.exports = (env = {}) => {
 				styles: path.resolve(__dirname, "src/scss"),
 				shared: path.resolve(__dirname, "src/shared"),
 				assets: path.resolve(__dirname, "public/assets"),
+				helpers: path.resolve(__dirname, "src/helpers"),
+				types: path.resolve(__dirname, "src/types"),
 				// assets: path.resolve(__dirname, "src/assets"),
 			},
 			modules: ["node_modules"],

@@ -1,7 +1,7 @@
 import { BrowserRouter } from "react-router-dom";
 import { Routes } from "./routes";
 import "bootstrap/dist/css/bootstrap.min.css";
-import "styles/main.scss";
+import "./scss/main.scss";
 
 function App(): JSX.Element {
 	return (

@@ -15,7 +15,8 @@
 		"baseUrl": "src",
 		"paths": {
 			"@styles/*": ["scss/*"],
-			"@shared/*": ["shared/*"]
+			"@shared/*": ["shared/*"],
+			"@helpers/*": ["helpers/*"]
 		},
 		"moduleResolution": "node",
 		"resolveJsonModule": true,

@@ -1,18 +1,15 @@
-@import "../../scss/mixins/font-face";
-
 .btn-component {
 	position: relative;
 	display: inline-flex;
 	align-items: center;
 	justify-content: center;
 	text-transform: uppercase;
-	@include font-face("Manrope", "Manrope-Bold", 700, normal);
 	letter-spacing: 0.0125rem;
 	outline: 0;
 	border: none;
 	cursor: pointer;
 	overflow: hidden;
-	font-weight: 600;
+	font-weight: 700;
 	&::after {
 		content: "";
 		background: #979797;

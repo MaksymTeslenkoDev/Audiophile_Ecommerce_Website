@@ -29,6 +29,7 @@
 		"@typescript-eslint/dot-notation": "off",
 		"@typescript-eslint/no-throw-literal": "off",
 		"import/prefer-default-export": "off",
+		"no-param-reassign": "off",
 		"quotes": [
 			"error",
 			"double",

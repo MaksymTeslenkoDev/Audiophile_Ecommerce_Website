@@ -1,32 +1,17 @@
 import { Row, Container, Col } from "react-bootstrap";
-import Earphones from "assets/shared/desktop/image-category-thumbnail-earphones.png";
-import Headphones from "assets/shared/desktop/image-category-thumbnail-headphones.png";
-import Speakers from "assets/shared/desktop/image-category-thumbnail-speakers.png";
 import "./styles/products.styles.scss";
 import { Button } from "shared/Button";
-import { ProductCartItem } from "./ProductCardItem";
+import { useNavigate } from "react-router-dom";
+import { getProductByTitle } from "helpers/getProductByTitle";
 
 export function ProductsSection(): JSX.Element {
+	const navigate = useNavigate();
+	const zx9 = getProductByTitle("zx9 speaker");
+	const zx7 = getProductByTitle("zx7 speaker");
+	const yx1 = getProductByTitle("yx1 earphones");
 	return (
 		<section className="products">
 			<Container>
-				<Row className="justify-content-center products__cards">
-					<ProductCartItem
-						title="headphones"
-						// urlRedirect=""
-						image={<img src={Headphones} alt="category-thumbnail-headphones" />}
-					/>
-					<ProductCartItem
-						title="speakers"
-						// urlRedirect=""
-						image={<img src={Speakers} alt="category-thumbnail-headphones" />}
-					/>
-					<ProductCartItem
-						title="earphones"
-						// urlRedirect=""
-						image={<img src={Earphones} alt="category-thumbnail-headphones" />}
-					/>
-				</Row>
 				<div className="products__promos">
 					<Row className="justify-content-center justify-content-lg-start promo-row main-promo">
 						<Col xs={12} lg={7} className="">
@@ -44,7 +29,11 @@ export function ProductsSection(): JSX.Element {
 									Upgrade to premium speakers that are phenomenally built to
 									deliver truly remarkable sound.
 								</p>
-								<Button color="dark" className="cta-button">
+								<Button
+									color="dark"
+									className="cta-button"
+									onClick={() => navigate((zx9 && `products/${zx9.id}`) || "/")}
+								>
 									see product
 								</Button>
 							</div>
@@ -56,7 +45,12 @@ export function ProductsSection(): JSX.Element {
 								<h3 className="title">
 									<p>ZX7 SPEAKER</p>
 								</h3>
-								<Button color="dark" variant="outlined" className="cta-button">
+								<Button
+									color="dark"
+									variant="outlined"
+									className="cta-button"
+									onClick={() => navigate((zx7 && `products/${zx7.id}`) || "/")}
+								>
 									see product
 								</Button>
 							</div>
@@ -71,7 +65,12 @@ export function ProductsSection(): JSX.Element {
 								<h3 className="title">
 									<p>YX1 EARPHONES</p>
 								</h3>
-								<Button color="dark" variant="outlined" className="cta-button">
+								<Button
+									color="dark"
+									variant="outlined"
+									className="cta-button"
+									onClick={() => navigate((yx1 && `products/${yx1.id}`) || "/")}
+								>
 									see product
 								</Button>
 							</div>
