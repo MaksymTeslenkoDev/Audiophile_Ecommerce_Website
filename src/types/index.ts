@@ -13,6 +13,7 @@ export interface Product {
 		mobile: ProductImagesData;
 		tablet: ProductImagesData;
 		desktop: ProductImagesData;
+		cartThumbnail: string;
 	};
 	isNew: boolean;
 	similars: Array<{ productId: string }>;

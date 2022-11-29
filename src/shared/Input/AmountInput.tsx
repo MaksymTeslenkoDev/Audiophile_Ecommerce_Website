@@ -18,7 +18,12 @@ export function AmountInput({ handleChange, value }: Props): JSX.Element {
 
 	return (
 		<div className="amount-input">
-			<button type="button" onClick={dec} className="amount-input__selector">
+			<button
+				type="button"
+				onClick={dec}
+				disabled={value <= 1}
+				className="amount-input__selector"
+			>
 				-
 			</button>
 			<span className="amount-input__value">{value}</span>

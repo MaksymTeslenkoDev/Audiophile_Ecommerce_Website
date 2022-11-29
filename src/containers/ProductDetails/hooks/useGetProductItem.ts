@@ -15,7 +15,7 @@ export function useGetProduct() {
 				setProduct(productEntity);
 			}
 		}
-	}, []);
+	}, [params]);
 
 	return product;
 }

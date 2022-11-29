@@ -14,6 +14,7 @@ import YX1_EARPHONES_G3_TABLET from "assets/product-yx1-earphones/tablet/image-g
 import YX1_EARPHONES_G1_MOBILE from "assets/product-yx1-earphones/mobile/image-gallery-1.jpg";
 import YX1_EARPHONES_G2_MOBILE from "assets/product-yx1-earphones/mobile/image-gallery-2.jpg";
 import YX1_EARPHONES_G3_MOBILE from "assets/product-yx1-earphones/mobile/image-gallery-3.jpg";
+import YX1_EARPHONES_CART_THUMBNAIL from "assets/cart/image-yx1-earphones.jpg";
 
 import ZX9_SPEAKERS_PREVIEW_DESKTOP from "assets/product-zx9-speaker/desktop/image-category-page-preview.jpg";
 import ZX9_SPEAKERS_PREVIEW_TABLET from "assets/product-zx9-speaker/tablet/image-category-page-preview.jpg";
@@ -33,6 +34,7 @@ import ZX9_SPEAKERS_G3_MOBILE from "assets/product-zx9-speaker/mobile/image-gall
 import ZX9_SPEAKERS_SIMILARS_THUMBNAIL_MOBILE from "assets/shared/mobile/image-zx9-speaker.jpg";
 import ZX9_SPEAKERS_SIMILARS_THUMBNAIL_DESKTOP from "assets/shared/desktop/image-zx9-speaker.jpg";
 import ZX9_SPEAKERS_SIMILARS_THUMBNAIL_TABLET from "assets/shared/tablet/image-zx9-speaker.jpg";
+import ZX9_SPEAKERS_CART_THUMBNAIL from "assets/cart/image-zx9-speaker.jpg";
 
 import ZX7_SPEAKERS_PREVIEW_DESKTOP from "assets/product-zx7-speaker/desktop/image-category-page-preview.jpg";
 import ZX7_SPEAKERS_PREVIEW_TABLET from "assets/product-zx7-speaker/tablet/image-category-page-preview.jpg";
@@ -52,6 +54,7 @@ import ZX7_SPEAKERS_G3_MOBILE from "assets/product-zx7-speaker/mobile/image-gall
 import ZX7_SPEAKERS_SIMILARS_THUMBNAIL_MOBILE from "assets/shared/mobile/image-zx7-speaker.jpg";
 import ZX7_SPEAKERS_SIMILARS_THUMBNAIL_DESKTOP from "assets/shared/desktop/image-zx7-speaker.jpg";
 import ZX7_SPEAKERS_SIMILARS_THUMBNAIL_TABLET from "assets/shared/tablet/image-zx7-speaker.jpg";
+import ZX7_SPEAKERS_CART_THUMBNAIL from "assets/cart/image-zx7-speaker.jpg";
 
 import X99_MARKTWO_HEADPHONES_MAIN_DESKTOP from "assets/productXx99MarkTwoHeadphones/desktop/image-product.jpg";
 import X99_MARKTWO_HEADPHONES_MAIN_TABLET from "assets/productXx99MarkTwoHeadphones/tablet/image-product.jpg";
@@ -71,6 +74,7 @@ import X99_MARKTWO_HEADPHONES_G3_MOBILE from "assets/productXx99MarkTwoHeadphone
 import X99_MARKTWO_HEADPHONES_SIMILARS_THUMBNAIL_MOBILE from "assets/shared/mobile/image-xx99-mark-two-headphones.jpg";
 import X99_MARKTWO_HEADPHONES_SIMILARS_THUMBNAIL_DESKTOP from "assets/shared/desktop/image-xx99-mark-two-headphones.jpg";
 import X99_MARKTWO_HEADPHONES_SIMILARS_THUMBNAIL_TABLET from "assets/shared/tablet/image-xx99-mark-two-headphones.jpg";
+import X99_MARKTWO_HEADPHONES_CART_THUMBNAIL from "assets/cart/image-xx99-mark-two-headphones.jpg";
 
 import X99_MARKONE_HEADPHONES_MAIN_DESKTOP from "assets/product-xx99-mark-one-headphones/desktop/image-product.jpg";
 import X99_MARKONE_HEADPHONES_MAIN_TABLET from "assets/product-xx99-mark-one-headphones/tablet/image-product.jpg";
@@ -90,6 +94,7 @@ import X99_MARKONE_HEADPHONES_G3_MOBILE from "assets/product-xx99-mark-one-headp
 import X99_MARKONE_HEADPHONES_SIMILARS_THUMBNAIL_MOBILE from "assets/shared/mobile/image-xx99-mark-one-headphones.jpg";
 import X99_MARKONE_HEADPHONES_SIMILARS_THUMBNAIL_DESKTOP from "assets/shared/desktop/image-xx99-mark-one-headphones.jpg";
 import X99_MARKONE_HEADPHONES_SIMILARS_THUMBNAIL_TABLET from "assets/shared/tablet/image-xx99-mark-one-headphones.jpg";
+import X99_MARKONE_HEADPHONES_CART_THUMBNAIL from "assets/cart/image-xx99-mark-one-headphones.jpg";
 
 import X59_HEADPHONES_MAIN_DESKTOP from "assets/product-xx59-headphones/desktop/image-product.jpg";
 import X59_HEADPHONES_MAIN_TABLET from "assets/product-xx59-headphones/tablet/image-product.jpg";
@@ -109,6 +114,7 @@ import X59_HEADPHONES_G3_MOBILE from "assets/product-xx59-headphones/mobile/imag
 import X59_HEADPHONES_SIMILARS_THUMBNAIL_MOBILE from "assets/shared/mobile/image-xx59-headphones.jpg";
 import X59_HEADPHONES_SIMILARS_THUMBNAIL_DESKTOP from "assets/shared/desktop/image-xx59-headphones.jpg";
 import X59_HEADPHONES_SIMILARS_THUMBNAIL_TABLET from "assets/shared/tablet/image-xx59-headphones.jpg";
+import X59_HEADPHONES_CART_THUMBNAIL from "assets/cart/image-xx59-headphones.jpg";
 
 export const Products: Array<Product> = [
 	{
@@ -173,6 +179,7 @@ export const Products: Array<Product> = [
 					img3: YX1_EARPHONES_G3_DESKTOP,
 				},
 			},
+			cartThumbnail: YX1_EARPHONES_CART_THUMBNAIL,
 		},
 		similars: [{ productId: "5" }, { productId: "6" }, { productId: "2" }],
 	},
@@ -239,6 +246,7 @@ export const Products: Array<Product> = [
 				},
 				similarsThumbnail: ZX9_SPEAKERS_SIMILARS_THUMBNAIL_DESKTOP,
 			},
+			cartThumbnail: ZX9_SPEAKERS_CART_THUMBNAIL,
 		},
 		similars: [{ productId: "3" }, { productId: "5" }, { productId: "6" }],
 	},
@@ -309,6 +317,7 @@ export const Products: Array<Product> = [
 				},
 				similarsThumbnail: ZX7_SPEAKERS_SIMILARS_THUMBNAIL_DESKTOP,
 			},
+			cartThumbnail: ZX7_SPEAKERS_CART_THUMBNAIL,
 		},
 		similars: [{ productId: "2" }, { productId: "5" }, { productId: "6" }],
 	},
@@ -376,6 +385,7 @@ export const Products: Array<Product> = [
 				},
 				similarsThumbnail: X99_MARKTWO_HEADPHONES_SIMILARS_THUMBNAIL_DESKTOP,
 			},
+			cartThumbnail: X99_MARKTWO_HEADPHONES_CART_THUMBNAIL,
 		},
 		similars: [{ productId: "5" }, { productId: "6" }, { productId: "2" }],
 	},
@@ -438,6 +448,7 @@ export const Products: Array<Product> = [
 				},
 				similarsThumbnail: X99_MARKONE_HEADPHONES_SIMILARS_THUMBNAIL_DESKTOP,
 			},
+			cartThumbnail: X99_MARKONE_HEADPHONES_CART_THUMBNAIL,
 		},
 		similars: [{ productId: "4" }, { productId: "6" }, { productId: "2" }],
 	},
@@ -500,6 +511,7 @@ export const Products: Array<Product> = [
 				},
 				similarsThumbnail: X59_HEADPHONES_SIMILARS_THUMBNAIL_DESKTOP,
 			},
+			cartThumbnail: X59_HEADPHONES_CART_THUMBNAIL,
 		},
 		similars: [{ productId: "4" }, { productId: "5" }, { productId: "2" }],
 	},

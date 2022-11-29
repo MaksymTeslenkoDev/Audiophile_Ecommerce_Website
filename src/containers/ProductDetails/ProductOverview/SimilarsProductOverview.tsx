@@ -2,6 +2,7 @@ import { Button } from "shared/Button";
 import { Col, Row } from "react-bootstrap";
 import { Product } from "types";
 import { getSimilarsProducts } from "helpers/getSimilars";
+import { useNavigate } from "react-router-dom";
 
 interface Props {
 	product: Product;
@@ -9,7 +10,7 @@ interface Props {
 
 export function SimilarsProductOverview({ product }: Props): JSX.Element {
 	const similars = getSimilarsProducts(product);
-
+	const navigate = useNavigate();
 	return (
 		<section className="product-overview-section__similars">
 			<p className="features-description__title similars__section-title">
@@ -36,7 +37,9 @@ export function SimilarsProductOverview({ product }: Props): JSX.Element {
 							/>
 						</div>
 						<p className="similars__item__title">{item.title}</p>
-						<Button>see product</Button>
+						<Button onClick={() => navigate(`/products/${item.id}`)}>
+							see product
+						</Button>
 					</Col>
 				))}
 			</Row>

@@ -1,0 +1,9 @@
+.back-button {
+	text-transform: capitalize;
+	opacity: 0.5;
+	border: none;
+	background: transparent;
+	&:hover {
+		cursor: pointer;
+	}
+}

@@ -30,6 +30,10 @@
 		"@typescript-eslint/no-throw-literal": "off",
 		"import/prefer-default-export": "off",
 		"no-param-reassign": "off",
+		"react/jsx-no-bind": ["off"],
+		"react/jsx-no-constructed-context-values": ["off"],
+		"no-case-declarations": ["off"],
+		"no-debugger": ["off"],
 		"quotes": [
 			"error",
 			"double",

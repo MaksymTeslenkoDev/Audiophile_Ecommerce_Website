@@ -10,10 +10,10 @@ export function FeaturesProductOverview({ product }: Props): JSX.Element {
 		<Row className="justify-content-md-between product-overview-section__features">
 			<Col lg={8} className="features-description">
 				<p className="features-description__title">Features</p>
-				<p className="features-description__description">
+				<div className="features-description__description">
 					<p>{product.features.split("/n")[0]}</p>
 					<p>{product.features.split("/n")[1]}</p>
-				</p>
+				</div>
 			</Col>
 			<Col lg={4} className="features-in-the-box">
 				<p className="features-description__title features-in-the-box__title">
@@ -21,7 +21,7 @@ export function FeaturesProductOverview({ product }: Props): JSX.Element {
 				</p>
 				<div className="features-in-the-box__items">
 					{product.inTheBox.map((item) => (
-						<p className="features-in-the-box__row">
+						<p key={Math.random()} className="features-in-the-box__row">
 							<span className="amount">{`${item.amount}x`}</span>
 							<span className="item-title">{item.itemTitle}</span>
 						</p>

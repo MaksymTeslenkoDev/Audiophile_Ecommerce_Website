@@ -3,6 +3,7 @@ import { Col, Container, Row } from "react-bootstrap";
 import { Product } from "types";
 import "./styles/type.products.section.scss";
 import { useNavigate } from "react-router-dom";
+import { getSplitedProductTitle } from "helpers/getSplitedProductTitle";
 
 interface Props {
 	items: Array<Product>;
@@ -13,9 +14,9 @@ export function TypeProductsSection({ items }: Props) {
 		<section className="product-type-items-section">
 			<Container fluid="md">
 				{items.map((item) => {
-					const splittedTitle = item.title.split(" ");
-					const titleLastWord = splittedTitle.pop();
-					const firstPartTitle = splittedTitle.join(" ");
+					const { titleLastWord, firstPartTitle } = getSplitedProductTitle(
+						item.title,
+					);
 					return (
 						<Row
 							key={Math.random()}

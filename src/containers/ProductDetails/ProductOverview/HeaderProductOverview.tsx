@@ -3,18 +3,32 @@ import { AmountInput } from "shared/Input/AmountInput";
 import { Col, Row } from "react-bootstrap";
 import { Product } from "types";
 import { Button } from "shared/Button";
+import { getSplitedProductTitle } from "helpers/getSplitedProductTitle";
 import { getTransformedPrice } from "../../../helpers/getTransformedPrice";
+import { useCartContext } from "../../Cart/Context/CartProvider";
 
 interface Props {
 	product: Product;
 }
 
 export function HeaderProductOverview({ product }: Props): JSX.Element {
-	const [productAmount, setProductAmount] = React.useState(1);
-	const splittedTitle = product.title.split(" ");
-	const titleLastWord = splittedTitle.pop();
-	const firstPartTitle = splittedTitle.join(" ");
+	const { cartState, addProduct, getCartProductAmount } = useCartContext();
+	const [productAmount, setProductAmount] = React.useState(
+		getCartProductAmount(product.id),
+	);
+	const { titleLastWord, firstPartTitle } = getSplitedProductTitle(
+		product.title,
+	);
 
+	console.log("cart state ", cartState);
+	const handleAddToBasket = () => {
+		const totalPrice = productAmount * product.price;
+		addProduct({
+			productId: product.id,
+			amount: productAmount,
+			price: totalPrice,
+		});
+	};
 	return (
 		<Row className="justify-content-md-between align-items-center product-overview-section__header">
 			<Col sm="5" md="6">
@@ -54,7 +68,7 @@ export function HeaderProductOverview({ product }: Props): JSX.Element {
 								handleChange={(value) => setProductAmount(value)}
 							/>
 						</div>
-						<Button>Add to cart</Button>
+						<Button onClick={handleAddToBasket}>Add to cart</Button>
 					</div>
 				</div>
 			</Col>
