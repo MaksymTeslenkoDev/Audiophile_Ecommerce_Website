@@ -12,7 +12,6 @@ function CartProvider({ children }: { children: React.ReactNode }) {
 	const [cartState, dispatch] = React.useReducer(CartReducer, {
 		products: (persistedState && JSON.parse(persistedState)) || [],
 	});
-
 	React.useEffect(() => {
 		sessionStorage.setItem("CartProducts", JSON.stringify(cartState.products));
 	}, [cartState.products]);
@@ -26,23 +25,14 @@ function CartProvider({ children }: { children: React.ReactNode }) {
 	const clearAll = () => {
 		dispatch({ type: DELETE_ALL_PRODUCTS });
 	};
-	const getCartProductAmount = (id: string) => {
-		const product = cartState.products.find((item) => item.productId === id);
-		return (product && product.amount) || 1;
+
+	const value = {
+		cartState,
+		addProduct,
+		deleteProduct,
+		clearAll,
 	};
-	return (
-		<CartContext.Provider
-			value={{
-				cartState,
-				addProduct,
-				deleteProduct,
-				clearAll,
-				getCartProductAmount,
-			}}
-		>
-			{children}
-		</CartContext.Provider>
-	);
+	return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 }
 
 function useCartContext() {

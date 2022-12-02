@@ -119,7 +119,7 @@ import X59_HEADPHONES_CART_THUMBNAIL from "assets/cart/image-xx59-headphones.jpg
 export const Products: Array<Product> = [
 	{
 		id: "1",
-		title: "YX1 WIRELESS EARPHONES",
+		title: "YX1 EARPHONES",
 		description: `Tailor your listening experience with bespoke dynamic drivers from the new YX1 Wireless Earphones.
              Enjoy incredible high-fidelity sound even in noisy environments with its active noise cancellation feature.`,
 		price: 599,

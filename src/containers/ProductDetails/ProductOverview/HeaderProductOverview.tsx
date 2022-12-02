@@ -1,34 +1,23 @@
-import React from "react";
 import { AmountInput } from "shared/Input/AmountInput";
 import { Col, Row } from "react-bootstrap";
 import { Product } from "types";
 import { Button } from "shared/Button";
 import { getSplitedProductTitle } from "helpers/getSplitedProductTitle";
 import { getTransformedPrice } from "../../../helpers/getTransformedPrice";
-import { useCartContext } from "../../Cart/Context/CartProvider";
+import { useHeaderProductOverview } from "../hooks/useHeaderProductOverview";
 
 interface Props {
 	product: Product;
 }
 
 export function HeaderProductOverview({ product }: Props): JSX.Element {
-	const { cartState, addProduct, getCartProductAmount } = useCartContext();
-	const [productAmount, setProductAmount] = React.useState(
-		getCartProductAmount(product.id),
-	);
 	const { titleLastWord, firstPartTitle } = getSplitedProductTitle(
 		product.title,
 	);
 
-	console.log("cart state ", cartState);
-	const handleAddToBasket = () => {
-		const totalPrice = productAmount * product.price;
-		addProduct({
-			productId: product.id,
-			amount: productAmount,
-			price: totalPrice,
-		});
-	};
+	const { productAmount, handleAddToBasket, handleChangeAmount } =
+		useHeaderProductOverview(product);
+
 	return (
 		<Row className="justify-content-md-between align-items-center product-overview-section__header">
 			<Col sm="5" md="6">
@@ -65,7 +54,8 @@ export function HeaderProductOverview({ product }: Props): JSX.Element {
 						<div className="amount-input-wrapper">
 							<AmountInput
 								value={productAmount}
-								handleChange={(value) => setProductAmount(value)}
+								minValue={1}
+								handleChange={handleChangeAmount}
 							/>
 						</div>
 						<Button onClick={handleAddToBasket}>Add to cart</Button>

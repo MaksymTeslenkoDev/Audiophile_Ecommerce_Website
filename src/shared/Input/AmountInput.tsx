@@ -3,9 +3,14 @@ import "./amount.input.style.scss";
 interface Props {
 	handleChange: (value: number) => void;
 	value: number;
+	minValue: number;
 }
 
-export function AmountInput({ handleChange, value }: Props): JSX.Element {
+export function AmountInput({
+	handleChange,
+	value,
+	minValue,
+}: Props): JSX.Element {
 	function inc() {
 		value += 1;
 		handleChange(value);
@@ -21,7 +26,7 @@ export function AmountInput({ handleChange, value }: Props): JSX.Element {
 			<button
 				type="button"
 				onClick={dec}
-				disabled={value <= 1}
+				disabled={value <= minValue}
 				className="amount-input__selector"
 			>
 				-

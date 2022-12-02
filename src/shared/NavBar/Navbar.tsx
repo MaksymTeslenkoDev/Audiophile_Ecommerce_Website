@@ -1,9 +1,9 @@
 import { Nav, Navbar, Row } from "react-bootstrap";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./navbar.styles.scss";
-import Icon from "assets/shared/desktop/icon-cart.svg";
 import Logo from "assets/shared/desktop/logo.svg";
 import Hamburger from "assets/shared/tablet/icon-hamburger.svg";
+import Cart from "../../containers/Cart";
 
 export function NavBar(): JSX.Element {
 	return (
@@ -20,7 +20,7 @@ export function NavBar(): JSX.Element {
 					<Logo width="9rem" height="1.625rem" />
 				</Navbar.Brand>
 				<div className="navigationBar__cart-icon navigationBar__cart-icon_mobile">
-					<Icon width="1.5rem" height="1.5rem" />
+					<Cart />
 				</div>
 				<Navbar.Collapse
 					id="basic-navbar-nav"
@@ -34,7 +34,7 @@ export function NavBar(): JSX.Element {
 					</Nav>
 				</Navbar.Collapse>
 				<div className="navigationBar__cart-icon navigationBar__cart-icon_desktop ml-auto">
-					<Icon width="1.5rem" height="1.25rem" />
+					<Cart />
 				</div>
 			</Navbar>
 		</Row>

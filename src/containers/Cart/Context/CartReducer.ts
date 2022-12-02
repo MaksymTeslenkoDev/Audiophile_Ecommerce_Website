@@ -5,7 +5,7 @@ import {
 } from "./ActionTypes";
 import { CartProductItem, CartState } from "./CartContext";
 
-type Action =
+export type Action =
 	| { type: typeof ADD_PRODUCT; payload: { product: CartProductItem } }
 	| { type: typeof DELETE_PRODUCT; payload: { productId: string } }
 	| { type: typeof DELETE_ALL_PRODUCTS };
@@ -16,7 +16,6 @@ export function CartReducer(state: CartState, action: Action): CartState {
 			const productIndex = state.products.findIndex(
 				(item) => item.productId === action.payload.product.productId,
 			);
-
 			return {
 				...state,
 				products:
