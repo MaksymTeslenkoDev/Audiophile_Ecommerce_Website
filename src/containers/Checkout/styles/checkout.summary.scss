@@ -1,0 +1,41 @@
+.checkout {
+	&__summary {
+		.btn-component {
+			width: 100%;
+		}
+	}
+}
+.summary {
+	&__title {
+		font-size: 1.125rem;
+		font-weight: 700;
+		margin-bottom: 1.5rem;
+		text-transform: uppercase;
+		letter-spacing: 1px;
+	}
+	&__content-block {
+		margin-bottom: 2rem;
+	}
+	&__price-row {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: 0.5rem;
+		&:last-child {
+			margin-bottom: 0;
+		}
+		&__title {
+			font-weight: 500;
+			text-transform: uppercase;
+			opacity: 0.5;
+			letter-spacing: 1px;
+		}
+		&__amount {
+			font-size: 1.125rem;
+			font-weight: 700;
+			text-transform: uppercase;
+			&.grand-total {
+				color: var(--color-common);
+			}
+		}
+	}
+}

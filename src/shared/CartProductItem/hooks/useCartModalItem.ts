@@ -1,5 +1,5 @@
-import { CartProductItem } from "../Context/CartContext";
-import { useCartContext } from "../Context/CartProvider";
+import { CartProductItem } from "../../../containers/Cart/Context/CartContext";
+import { useCartContext } from "../../../containers/Cart/Context/CartProvider";
 
 export function useCartModalItem(product: CartProductItem) {
 	const { addProduct, deleteProduct } = useCartContext();

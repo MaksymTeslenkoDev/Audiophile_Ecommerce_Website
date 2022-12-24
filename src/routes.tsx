@@ -2,7 +2,7 @@ import { Route, Routes as BrowserRoutes } from "react-router-dom";
 import ProductType from "./containers/ProductsType";
 import ProductDetails from "./containers/ProductDetails";
 import Home from "./containers/home";
-import { Checkout } from "./containers/Checkout";
+import Checkout from "./containers/Checkout";
 
 export function Routes(): JSX.Element {
 	return (

@@ -1,35 +1,29 @@
-import { FormProvider, useForm } from "react-hook-form";
-import { AppFormInput } from "shared/Input/AppInput/AppFormInput";
-import { yupResolver } from "@hookform/resolvers/yup";
-import * as yup from "yup";
-import { Button } from "shared/Button";
+import { Container } from "react-bootstrap";
+import { BackButton } from "shared/BackButton";
+import { NavBar } from "shared/NavBar";
+import { FormSummaryWrapper } from "./CheckoutFormSummaryWrapper";
+import { ModalProvider } from "../Modal/Context/ModalProvider";
+import { ModalDialog } from "../Modal/modal";
+import "./styles/checkout.scss";
+import { ThankYouModal } from "./ThankYouModal/ThankYouModal";
 
-const schema = yup.object().shape({
-	name: yup.string().required("Required"),
-});
-
-export function Checkout(): JSX.Element {
-	const methods = useForm<{ name: string }>({
-		mode: "onBlur",
-		resolver: yupResolver(schema),
-	});
-	const handleSubmit = methods.handleSubmit(() => {});
-
+export function Checkout() {
 	return (
-		<FormProvider {...methods}>
-			<form onSubmit={handleSubmit}>
-				<div style={{ width: "400px" }}>
-					<AppFormInput
-						name="name"
-						label="Name"
-						id="name"
-						helperText="error"
-						placeholder="test"
-					/>
+		<ModalProvider>
+			<section className="checkout-section">
+				<div className="checkout-section__header">
+					<Container fluid="md">
+						<NavBar />
+					</Container>
 				</div>
-
-				<Button type="submit">Submit</Button>
-			</form>
-		</FormProvider>
+				<Container fluid="md" className="checkout-section__container">
+					<BackButton />
+					<FormSummaryWrapper />
+				</Container>
+			</section>
+			<ModalDialog>
+				<ThankYouModal />
+			</ModalDialog>
+		</ModalProvider>
 	);
 }

@@ -2,9 +2,10 @@ import { Button } from "shared/Button";
 import { getTotalCartPrice } from "helpers/getTotalCartPrice";
 import { getTransformedPrice } from "helpers/getTransformedPrice";
 import Modal from "react-bootstrap/Modal";
+import { useNavigate } from "react-router-dom";
+import { CartSummaryItem } from "shared/CartProductItem";
 import { useCartContext } from "../Context/CartProvider";
 import "./cart.modal.scss";
-import { CartItem } from "./CartModalProductItemRow";
 
 interface Props {
 	isOpen: boolean;
@@ -12,12 +13,17 @@ interface Props {
 }
 export function CartModalWrapper({ isOpen, closeModal }: Props): JSX.Element {
 	const { cartState, clearAll } = useCartContext();
+	const navigate = useNavigate();
 	const renderCartItems = () => {
 		if (cartState.products.length > 0) {
 			return (
 				<div className="cart-modal__items-wrapper">
 					{cartState.products.map((item) => (
-						<CartItem key={Math.random()} product={item} />
+						<CartSummaryItem
+							isAmountInput
+							key={item.productId}
+							product={item}
+						/>
 					))}
 				</div>
 			);
@@ -43,7 +49,7 @@ export function CartModalWrapper({ isOpen, closeModal }: Props): JSX.Element {
 					{getTransformedPrice(getTotalCartPrice(cartState.products))}
 				</span>
 			</div>
-			<Button>Checkout</Button>
+			<Button onClick={() => navigate("/checkout")}>Checkout</Button>
 		</Modal>
 	);
 }
