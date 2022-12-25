@@ -18,7 +18,7 @@ export function SimilarsProductOverview({ product }: Props): JSX.Element {
 			</p>
 			<Row>
 				{similars.map((item) => (
-					<Col xs={12} md={4} key={Math.random()} className="similars__item">
+					<Col xs={12} md={4} key={item.id} className="similars__item">
 						<div className="galery__img-wrapper similars__img-wrapper">
 							<img
 								className="galery__img-wrapper--desktop"

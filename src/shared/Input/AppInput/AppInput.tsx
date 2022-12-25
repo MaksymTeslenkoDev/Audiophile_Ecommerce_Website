@@ -1,12 +1,10 @@
 import React, { InputHTMLAttributes } from "react";
-import { RefCallBack } from "react-hook-form";
 import "./app.input.scss";
 
 export interface AppInputProps extends InputHTMLAttributes<HTMLInputElement> {
 	label: string;
 	helperText?: string;
 	id: string;
-	ref?: RefCallBack;
 	error?: boolean;
 }
 
@@ -47,6 +45,6 @@ export const AppInput = React.forwardRef<HTMLInputElement, AppInputProps>(
 
 AppInput.defaultProps = {
 	error: false,
-	ref: undefined,
+	// refference: undefined,
 	helperText: "",
 };

@@ -16,7 +16,7 @@ export function RadioButtonsGroup({
 	return (
 		<div>
 			{items.map((i) => (
-				<div key={Math.random()} className="radio-btn-field">
+				<div key={i.label + i.value} className="radio-btn-field">
 					<RadioButton
 						value={i.value}
 						label={i.label}

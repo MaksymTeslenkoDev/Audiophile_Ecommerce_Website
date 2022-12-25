@@ -21,7 +21,10 @@ export function FeaturesProductOverview({ product }: Props): JSX.Element {
 				</p>
 				<div className="features-in-the-box__items">
 					{product.inTheBox.map((item) => (
-						<p key={Math.random()} className="features-in-the-box__row">
+						<p
+							key={product.id + item.itemTitle}
+							className="features-in-the-box__row"
+						>
 							<span className="amount">{`${item.amount}x`}</span>
 							<span className="item-title">{item.itemTitle}</span>
 						</p>

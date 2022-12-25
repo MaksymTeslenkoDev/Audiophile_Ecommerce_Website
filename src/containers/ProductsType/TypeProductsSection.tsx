@@ -19,7 +19,7 @@ export function TypeProductsSection({ items }: Props) {
 					);
 					return (
 						<Row
-							key={Math.random()}
+							key={item.id}
 							className="justify-content-lg-between align-items-lg-center product-type-items-section__item-wrapper"
 						>
 							<Col lg="6">

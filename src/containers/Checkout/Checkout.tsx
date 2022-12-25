@@ -3,7 +3,7 @@ import { BackButton } from "shared/BackButton";
 import { NavBar } from "shared/NavBar";
 import { FormSummaryWrapper } from "./CheckoutFormSummaryWrapper";
 import { ModalProvider } from "../Modal/Context/ModalProvider";
-import { ModalDialog } from "../Modal/modal";
+import { ModalDialog } from "../Modal/Modal";
 import "./styles/checkout.scss";
 import { ThankYouModal } from "./ThankYouModal/ThankYouModal";
 

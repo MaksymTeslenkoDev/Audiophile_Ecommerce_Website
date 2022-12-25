@@ -13,10 +13,10 @@ export function ThankYouModal(): JSX.Element {
 			<p className="thank-you__content-row">
 				<CONFIRMATION_ICON width="4rem" height="4rem" />
 			</p>
-			<p className="thank-you__title thank-you__content-row">
+			<div className="thank-you__title thank-you__content-row">
 				<p>Thank you</p>
 				<p>for your order</p>
-			</p>
+			</div>
 			<p className="thank-you__sub-title thank-you__content-row">
 				You will receive an email confirmation shortly.
 			</p>
