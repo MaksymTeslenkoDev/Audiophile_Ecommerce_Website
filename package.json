@@ -7,7 +7,7 @@
 		"start": "webpack-dev-server",
 		"build:dev": "webpack --env mode=development",
 		"build": "webpack --env mode=production",
-		"test": "echo \"Error: no test specified\" && exit 1",
+		"test": "echo \"Error: no test specified\"",
 		"lint": "eslint .",
 		"lint:fix": "eslint --fix .",
 		"prepare": "husky install"
