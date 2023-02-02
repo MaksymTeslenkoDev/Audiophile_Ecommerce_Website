@@ -1,10 +1,11 @@
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const TerserPlugin = require("terser-webpack-plugin");
-const OptimizeCSSAssetsPlugin = require("mini-css-extract-plugin");
 const path = require("path");
 const webpack = require("webpack");
 const ESLintPlugin = require("eslint-webpack-plugin");
+const Dotenv = require("dotenv-webpack");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = (env = {}) => {
 	const { mode = "development" } = env;
@@ -23,7 +24,7 @@ module.exports = (env = {}) => {
 				Object.assign(
 					{},
 					{
-						title: "Paint Online",
+						title: "Swapplace client",
 						buildTime: new Date().toString(),
 						template: "public/index.html",
 					},
@@ -39,12 +40,26 @@ module.exports = (env = {}) => {
 									keepClosingSlash: true,
 									minifyJS: true,
 									minifyCSS: true,
-									minifyURLs: true,
+									minifyURLs: false,
 								},
 						  }
 						: undefined,
 				),
 			),
+			new CopyPlugin({
+				patterns: [
+					{
+						from: path.resolve(__dirname, "public", "web.config"),
+						to: path.resolve(__dirname, "dist"),
+					},
+				],
+				options: {
+					concurrency: 100,
+				},
+			}),
+			new Dotenv({
+				path: `./.env.${mode}`,
+			}),
 			new ESLintPlugin({ extensions: ["ts", "tsx"] }),
 			new webpack.DefinePlugin({
 				IS_DEV_MODE: isDev,
@@ -58,14 +73,14 @@ module.exports = (env = {}) => {
 				new MiniCssExtractPlugin({
 					filename: "main-[hash:8].css",
 				}),
-				new OptimizeCSSAssetsPlugin({
-					cssProcessorOptions: {
-						map: {
-							inline: false,
-							annotation: true,
-						},
-					},
-				}),
+				// new OptimizeCSSAssetsPlugin({
+				// 	cssProcessorOptions: {
+				// 		map: {
+				// 			inline: false,
+				// 			annotation: true,
+				// 		},
+				// 	},
+				// }),
 			);
 		}
 
@@ -84,7 +99,6 @@ module.exports = (env = {}) => {
 							},
 							compress: {
 								ecma: 5,
-								warning: false,
 								inline: 2,
 							},
 							mangle: {
@@ -94,13 +108,10 @@ module.exports = (env = {}) => {
 							output: {
 								ecma: 5,
 								comments: false,
-								ascii__only: true,
 							},
 						},
 						// Use multi-process parallel running to improve the build speed
 						parallel: true,
-						// Enable file caching
-						cache: true,
 					}),
 				],
 			};
