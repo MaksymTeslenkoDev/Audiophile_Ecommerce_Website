@@ -1,4 +1,4 @@
-# Frontend Mentor - Audiophile e-commerce website
+# Audiophile e-commerce website
 
 ![Design preview for the Audiophile e-commerce website coding challenge](./preview.jpg)
 
@@ -20,10 +20,4 @@ Users should be able to:
 
 ## Links
 
-As mentioned above, there are many ways to host your project for free. Our recommend hosts are:
-
-- [GitHub Pages](https://pages.github.com/)
-- [Vercel](https://vercel.com/)
-- [Netlify](https://www.netlify.com/)
-
-You can host your site using one of these solutions or any of our other trusted providers. [Read more about our recommended and trusted hosts](https://medium.com/frontend-mentor/frontend-mentor-trusted-hosting-providers-bf000dfebe).
+Web site URL is: https://jolly-pebble-0abbb3b10.2.azurestaticapps.net/
