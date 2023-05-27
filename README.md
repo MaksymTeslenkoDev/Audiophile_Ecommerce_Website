@@ -20,4 +20,4 @@ Users should be able to:
 
 ## Links
 
-Web site URL is: https://jolly-pebble-0abbb3b10.2.azurestaticapps.net/
+Web site URL is: https://audiophile-ecommerce-website-kanpvhafv-maksymteslenkodev.vercel.app/
